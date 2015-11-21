@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FE4BF76B1BE68B9100986A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BF76A1BE68B9100986A45 /* AppDelegate.swift */; };
-		FE4BF76D1BE68B9100986A45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BF76C1BE68B9100986A45 /* ViewController.swift */; };
+		FE4BF76D1BE68B9100986A45 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BF76C1BE68B9100986A45 /* ListViewController.swift */; };
 		FE4BF7701BE68B9100986A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4BF76E1BE68B9100986A45 /* Main.storyboard */; };
 		FE4BF7721BE68B9100986A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4BF7711BE68B9100986A45 /* Assets.xcassets */; };
 		FE4BF7751BE68B9100986A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4BF7731BE68B9100986A45 /* LaunchScreen.storyboard */; };
 		FE4BF7801BE68B9100986A45 /* DeviceInfoSendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BF77F1BE68B9100986A45 /* DeviceInfoSendTests.swift */; };
 		FE4BF78B1BE68B9100986A45 /* DeviceInfoSendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BF78A1BE68B9100986A45 /* DeviceInfoSendUITests.swift */; };
+		FE59379C1BFE72E400D4B551 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE59379B1BFE72E400D4B551 /* ChecklistItem.swift */; };
 		FE8CB8B61BEBFD6A0052928E /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8CB8B51BEBFD6A0052928E /* SystemServices.m */; };
 		FE8CB8D51BEC1F4B0052928E /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8CB8B91BEC1F4B0052928E /* NSObject+PerformBlockAfterDelay.m */; };
 		FE8CB8D61BEC1F4B0052928E /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8CB8BB1BEC1F4B0052928E /* SSAccelerometerInfo.m */; };
@@ -52,7 +53,7 @@
 		FE4B7B231BF56751002BCCB6 /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
 		FE4BF7671BE68B9100986A45 /* DeviceInfoSend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceInfoSend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4BF76A1BE68B9100986A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE4BF76C1BE68B9100986A45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE4BF76C1BE68B9100986A45 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FE4BF76F1BE68B9100986A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE4BF7711BE68B9100986A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE4BF7741BE68B9100986A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		FE4BF7861BE68B9100986A45 /* DeviceInfoSendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceInfoSendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4BF78A1BE68B9100986A45 /* DeviceInfoSendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoSendUITests.swift; sourceTree = "<group>"; };
 		FE4BF78C1BE68B9100986A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE59379B1BFE72E400D4B551 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		FE8CB8B31BEBFD690052928E /* DeviceInfoSend-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeviceInfoSend-Bridging-Header.h"; sourceTree = "<group>"; };
 		FE8CB8B41BEBFD6A0052928E /* SystemServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemServices.h; path = ../../junkApp/junkApp/SystemServices.h; sourceTree = "<group>"; };
 		FE8CB8B51BEBFD6A0052928E /* SystemServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemServices.m; path = ../../junkApp/junkApp/SystemServices.m; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		FE4BF75E1BE68B9100986A45 = {
 			isa = PBXGroup;
 			children = (
+				FE59379B1BFE72E400D4B551 /* ChecklistItem.swift */,
 				FE4BF7691BE68B9100986A45 /* DeviceInfoSend */,
 				FE4BF77E1BE68B9100986A45 /* DeviceInfoSendTests */,
 				FE4BF7891BE68B9100986A45 /* DeviceInfoSendUITests */,
@@ -149,7 +152,7 @@
 				FE8CB8B41BEBFD6A0052928E /* SystemServices.h */,
 				FE8CB8B51BEBFD6A0052928E /* SystemServices.m */,
 				FE4BF76A1BE68B9100986A45 /* AppDelegate.swift */,
-				FE4BF76C1BE68B9100986A45 /* ViewController.swift */,
+				FE4BF76C1BE68B9100986A45 /* ListViewController.swift */,
 				FE4BF76E1BE68B9100986A45 /* Main.storyboard */,
 				FE4BF7711BE68B9100986A45 /* Assets.xcassets */,
 				FE4BF7731BE68B9100986A45 /* LaunchScreen.storyboard */,
@@ -352,9 +355,10 @@
 				FE8CB8DD1BEC1F4B0052928E /* SSLocalizationInfo.m in Sources */,
 				FE8CB8DA1BEC1F4B0052928E /* SSCarrierInfo.m in Sources */,
 				FE8CB8DB1BEC1F4B0052928E /* SSDiskInfo.m in Sources */,
+				FE59379C1BFE72E400D4B551 /* ChecklistItem.swift in Sources */,
 				FE8CB8DE1BEC1F4B0052928E /* SSMemoryInfo.m in Sources */,
 				FE8CB8D61BEC1F4B0052928E /* SSAccelerometerInfo.m in Sources */,
-				FE4BF76D1BE68B9100986A45 /* ViewController.swift in Sources */,
+				FE4BF76D1BE68B9100986A45 /* ListViewController.swift in Sources */,
 				FE4BF76B1BE68B9100986A45 /* AppDelegate.swift in Sources */,
 				FE8CB8D51BEC1F4B0052928E /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				FE8CB8E21BEC1F4B0052928E /* SSUUID.m in Sources */,
