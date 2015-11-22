@@ -30,6 +30,7 @@
 		FE8CB8E01BEC1F4B0052928E /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8CB8CF1BEC1F4B0052928E /* SSProcessInfo.m */; };
 		FE8CB8E11BEC1F4B0052928E /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8CB8D11BEC1F4B0052928E /* SSProcessorInfo.m */; };
 		FE8CB8E21BEC1F4B0052928E /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8CB8D31BEC1F4B0052928E /* SSUUID.m */; };
+		FEF3D5651C0211BF00DC68C8 /* question1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FEF3D5641C0211BF00DC68C8 /* question1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		FE8CB8D21BEC1F4B0052928E /* SSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUUID.h; sourceTree = "<group>"; };
 		FE8CB8D31BEC1F4B0052928E /* SSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUUID.m; sourceTree = "<group>"; };
 		FE8CB8D41BEC1F4B0052928E /* SystemServicesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesConstants.h; sourceTree = "<group>"; };
+		FEF3D5641C0211BF00DC68C8 /* question1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = question1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				FE59379B1BFE72E400D4B551 /* ChecklistItem.swift */,
+				FEF3D5641C0211BF00DC68C8 /* question1.jpeg */,
 				FE4BF7691BE68B9100986A45 /* DeviceInfoSend */,
 				FE4BF77E1BE68B9100986A45 /* DeviceInfoSendTests */,
 				FE4BF7891BE68B9100986A45 /* DeviceInfoSendUITests */,
@@ -325,6 +328,7 @@
 				FE4BF7751BE68B9100986A45 /* LaunchScreen.storyboard in Resources */,
 				FE4BF7721BE68B9100986A45 /* Assets.xcassets in Resources */,
 				FE4BF7701BE68B9100986A45 /* Main.storyboard in Resources */,
+				FEF3D5651C0211BF00DC68C8 /* question1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

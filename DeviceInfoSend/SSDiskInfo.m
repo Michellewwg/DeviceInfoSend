@@ -71,7 +71,7 @@
                 return nil;
             }
             // Convert that float to a string
-            DiskSpace = [NSString stringWithFormat:@"%.f%%", PercentDiskSpace];
+            DiskSpace = [NSString stringWithFormat:@"%.02f%%", PercentDiskSpace];
         } else {
             // Turn that long long into a string
             DiskSpace = [self formatMemory:Space];

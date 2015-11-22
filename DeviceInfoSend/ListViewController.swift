@@ -77,20 +77,33 @@ class ListViewController: UITableViewController {
         allInfoArray.append("PluggedIn: \(ss.pluggedIn)")
         allInfoArray.append("Jailbroken: \(ss.jailbroken)")
         
+        
+        
+        allInfoArray.append(". ")
+        allInfoArray.append("*** NETWORK ***")
+        allInfoArray.append("Current IP Address: \(ss.currentIPAddress)")
+        allInfoArray.append("Current MAC Address: \(ss.currentMACAddress)")
+        allInfoArray.append("External IP Address: \(ss.externalIPAddress)")
+        allInfoArray.append("Cell IP Address: \(ss.cellIPAddress)")
+        allInfoArray.append("Cell MAC Address: \(ss.cellMACAddress)")
+        allInfoArray.append("Cell Netmask Address: \(ss.cellNetmaskAddress)")
+        allInfoArray.append("Cell Netmask Address: \(ss.cellNetmaskAddress)")
+        allInfoArray.append("Cell Broadcast Addr: \(ss.cellBroadcastAddress)")
+        allInfoArray.append("WiFi IP Address: \(ss.wiFiIPAddress)")
+        allInfoArray.append("WiFi MAC Address: \(ss.wiFiMACAddress)")
+        allInfoArray.append("WiFi Netmask Address: \(ss.wiFiNetmaskAddress)")
+        allInfoArray.append("WiFi Broadcast Address: \(ss.wiFiBroadcastAddress)")
+        allInfoArray.append("WiFi Router Address: \(ss.wiFiRouterAddress)")
+        allInfoArray.append("Connected To WiFi: \(ss.connectedToWiFi)")
+        allInfoArray.append("Connected To Cell Network: \(ss.connectedToCellNetwork)")
+        
+        
         allInfoArray.append(". ")
         allInfoArray.append("*** LOCALIZATION ***")
         allInfoArray.append("Country: \(ss.country)")
         allInfoArray.append("Language: \(ss.language)")
         allInfoArray.append("TimeZoneSS: \(ss.timeZoneSS)")
         allInfoArray.append("Currency: \(ss.currency) ")
-        
-        allInfoArray.append(". ")
-     
-        allInfoArray.append("*** PROCESSOR ***")
-        allInfoArray.append("Number Processors: \(ss.numberProcessors)")
-        allInfoArray.append("Number Active: \(ss.numberActiveProcessors)")
-        allInfoArray.append("Speed: \(ss.processorSpeed)")
-        allInfoArray.append("Bus Speed: \(ss.processorBusSpeed)")
         
         
         allInfoArray.append(". ")
@@ -112,24 +125,6 @@ class ListViewController: UITableViewController {
         
         
         allInfoArray.append(". ")
-        allInfoArray.append("*** NETWORK ***")
-        allInfoArray.append("Current IP Address: \(ss.currentIPAddress)")
-        allInfoArray.append("Current MAC Address: \(ss.currentMACAddress)")
-        allInfoArray.append("External IP Address: \(ss.externalIPAddress)")
-        allInfoArray.append("Cell IP Address: \(ss.cellIPAddress)")
-        allInfoArray.append("Cell MAC Address: \(ss.cellMACAddress)")
-        allInfoArray.append("Cell Netmask Address: \(ss.cellNetmaskAddress)")
-        allInfoArray.append("Cell Netmask Address: \(ss.cellNetmaskAddress)")
-        allInfoArray.append("Cell Broadcast Addr: \(ss.cellBroadcastAddress)")
-        allInfoArray.append("WiFi IP Address: \(ss.wiFiIPAddress)")
-        allInfoArray.append("WiFi MAC Address: \(ss.wiFiMACAddress)")
-        allInfoArray.append("WiFi Netmask Address: \(ss.wiFiNetmaskAddress)")
-        allInfoArray.append("WiFi Broadcast Address: \(ss.wiFiBroadcastAddress)")
-        allInfoArray.append("WiFi Router Address: \(ss.wiFiRouterAddress)")
-        allInfoArray.append("Connected To WiFi: \(ss.connectedToWiFi)")
-        allInfoArray.append("Connected To Cell Network: \(ss.connectedToCellNetwork)")
-        
-        allInfoArray.append(". ")
         allInfoArray.append("*** DISK ***")
         allInfoArray.append("Disk Space: \(ss.diskSpace)")
         allInfoArray.append("Free Disk Space Raw: \(ss.freeDiskSpaceinRaw)")
@@ -144,17 +139,30 @@ class ListViewController: UITableViewController {
         allInfoArray.append("*** MEMORY ***")
         allInfoArray.append("Total Memory: \(ss.totalMemory)")
         allInfoArray.append("Free Memory Raw: \(ss.freeMemoryinRaw)")
-        allInfoArray.append("Free Memory Percent: \(ss.freeMemoryinPercent)")
+        var pct = NSString(format: "%.2f",ss.freeMemoryinPercent)
+        allInfoArray.append("Free Memory Percent: \(pct)%")
+        
         allInfoArray.append("Used Memory Raw: \(ss.usedMemoryinRaw)")
-        allInfoArray.append("Used Memory Percent: \(ss.usedMemoryinPercent)")
+       // allInfoArray.append("Used Memory Percent: \(ss.usedMemoryinPercent)")
+       pct = NSString(format: "%.2f",ss.usedMemoryinPercent)
+         allInfoArray.append("Used Memory Percent: \(pct)%")
         allInfoArray.append("Active Memory Raw: \(ss.activeMemoryinRaw)")
-        allInfoArray.append("Active Memory Percent: \(ss.activeMemoryinPercent)")
+        
+        pct = NSString(format: "%.2f",ss.activeMemoryinPercent)
+        allInfoArray.append("Active Memory Percent: \(pct)%")
+        
         allInfoArray.append("Inactive Memory Raw: \(ss.inactiveMemoryinRaw)")
-        allInfoArray.append("Inactive Memory Percent: \(ss.inactiveMemoryinPercent)")
+        pct = NSString(format: "%.2f",ss.inactiveMemoryinPercent)
+        allInfoArray.append("Inactive Memory Percent: \(pct)%")
+        
         allInfoArray.append("Wired Memory Raw: \(ss.wiredMemoryinRaw)")
-        allInfoArray.append("Wired Memory Percent: \(ss.wiredMemoryinPercent)")
+        
+        pct = NSString(format: "%.2f",ss.wiredMemoryinPercent)
+        allInfoArray.append("Wired Memory Percent: \(pct)%")
         allInfoArray.append("Purgable Memory Raw: \(ss.purgableMemoryinRaw)")
-        allInfoArray.append("Purgable Memory Percent: \(ss.purgableMemoryinPercent)")
+        
+        pct = NSString(format: "%.2f",ss.purgableMemoryinPercent)
+        allInfoArray.append("Purgable Memory Percent: \(pct)% ")
         
         
         allInfoArray.append(". ")
@@ -164,7 +172,14 @@ class ListViewController: UITableViewController {
         allInfoArray.append("Number Attached Accessories: \(ss.numberAttachedAccessories)")
         allInfoArray.append("Name Attached Accessories: \(ss.nameAttachedAccessories)")
         
-
+        
+        allInfoArray.append(". ")
+        
+        allInfoArray.append("*** PROCESSOR ***")
+        allInfoArray.append("Number Processors: \(ss.numberProcessors)")
+        allInfoArray.append("Number Active: \(ss.numberActiveProcessors)")
+        allInfoArray.append("Speed: \(ss.processorSpeed)")
+        allInfoArray.append("Bus Speed: \(ss.processorBusSpeed)")
         
         
         
@@ -194,7 +209,7 @@ class ListViewController: UITableViewController {
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
                 dateFormatter.timeZone = NSTimeZone(name: "UTC")
-                dateFormatter.dateFormat = "yyyyMMdd'T'HHmmss'Z'"
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
                 // let dateString = dateFormatter.stringFromDate(date)
                 var pStart = "??"
                 if  let name = rowDict["Name"] {
@@ -209,7 +224,7 @@ class ListViewController: UITableViewController {
                     pStart    = dateFormatter.stringFromDate(startDate as! NSDate)
                 }
                 
-                allInfoArray.append("Name: \(pName) Started: \(pStart) \nPri: \(pPri)")
+                allInfoArray.append("\(pName) Started: \(pStart) \nPri: \(pPri)")
                 
                 
             }
