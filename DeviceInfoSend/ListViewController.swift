@@ -9,11 +9,38 @@
 import UIKit
 
 class ListViewController: UITableViewController {
+
+
+
+    override func viewDidAppear(animated: Bool) {
+        if NSUserDefaults.standardUserDefaults().boolForKey("TermsAccepted") {
+            // Terms have been accepted, proceed as normal
+        } else {
+ //           performSegueWithIdentifier("TermsViewController", sender: nil)
+            
+ //           let viewController = (self.storyboard?.instantiateViewControllerWithIdentifier("TermsViewController"))! as UIViewController
+   //         self.navigationController?.setViewControllers([viewController], animated: false)
+//            let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            self.performSegueWithIdentifier("TermsViewController", sender: nil)
+           // self.presentViewController(vc, animated: true, completion: nil)
+            
+        }
+    }
     
     @IBAction func sendData(){
         
+        var emailText:String = ""
         
-        let activityViewController = UIActivityViewController(activityItems: allInfoArray, applicationActivities: nil)
+        for detailLine in allInfoArray {
+            if detailLine == " " {
+                emailText = emailText + "\n"
+            } else {
+                emailText = emailText + detailLine + "\n"
+            }
+        }
+        
+        //let activityViewController = UIActivityViewController(activityItems: allInfoArray, applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [emailText], applicationActivities: nil)
         activityViewController.setValue("Device Information Report [\(SystemServices().systemDeviceTypeFormatted)]", forKey: "Subject")
         
         
@@ -37,6 +64,8 @@ class ListViewController: UITableViewController {
         
         
         presentViewController(activityViewController, animated: true, completion: nil)
+        
+        
     //    if #available(iOS 8.0, *) {
             let presentationController = activityViewController.popoverPresentationController
             presentationController?.sourceView = view
@@ -60,6 +89,9 @@ class ListViewController: UITableViewController {
         //    for (key, value) in allInfoDictionary {
         //       allInfoArray.append("\(key): \(value)")
         //    }
+        
+        self.navigationItem.hidesBackButton = true;
+
         let ss = SystemServices()
 
         
@@ -79,7 +111,7 @@ class ListViewController: UITableViewController {
         
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         allInfoArray.append("*** NETWORK ***")
         allInfoArray.append("Current IP Address: \(ss.currentIPAddress)")
         allInfoArray.append("Current MAC Address: \(ss.currentMACAddress)")
@@ -98,7 +130,7 @@ class ListViewController: UITableViewController {
         allInfoArray.append("Connected To Cell Network: \(ss.connectedToCellNetwork)")
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         allInfoArray.append("*** LOCALIZATION ***")
         allInfoArray.append("Country: \(ss.country)")
         allInfoArray.append("Language: \(ss.language)")
@@ -106,7 +138,7 @@ class ListViewController: UITableViewController {
         allInfoArray.append("Currency: \(ss.currency) ")
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         allInfoArray.append("*** CARRIER ***")
         allInfoArray.append("Name: \(ss.carrierName)")
         allInfoArray.append("Country: \(ss.carrierCountry)")
@@ -116,7 +148,7 @@ class ListViewController: UITableViewController {
         allInfoArray.append("AllowsVOIP: \(ss.carrierAllowsVOIP)")
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         allInfoArray.append("*** BATTERY ***")
         allInfoArray.append("Level: \(ss.batteryLevel)")
         allInfoArray.append("Charging: \(ss.charging)")
@@ -124,7 +156,7 @@ class ListViewController: UITableViewController {
         
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         allInfoArray.append("*** DISK ***")
         allInfoArray.append("Disk Space: \(ss.diskSpace)")
         allInfoArray.append("Free Disk Space Raw: \(ss.freeDiskSpaceinRaw)")
@@ -135,7 +167,7 @@ class ListViewController: UITableViewController {
         //  allInfoArray.append("longFreeDiskSpace: \(ss.longFreeDiskSpace)")
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         allInfoArray.append("*** MEMORY ***")
         allInfoArray.append("Total Memory: \(ss.totalMemory)")
         allInfoArray.append("Free Memory Raw: \(ss.freeMemoryinRaw)")
@@ -165,7 +197,7 @@ class ListViewController: UITableViewController {
         allInfoArray.append("Purgable Memory Percent: \(pct)% ")
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         allInfoArray.append("*** ACCESSORY ***")
         allInfoArray.append("Accessories Attached: \(ss.accessoriesAttached)")
         allInfoArray.append("Headphones Attached: \(ss.headphonesAttached)")
@@ -173,7 +205,7 @@ class ListViewController: UITableViewController {
         allInfoArray.append("Name Attached Accessories: \(ss.nameAttachedAccessories)")
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         
         allInfoArray.append("*** PROCESSOR ***")
         allInfoArray.append("Number Processors: \(ss.numberProcessors)")
@@ -184,21 +216,21 @@ class ListViewController: UITableViewController {
         
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         allInfoArray.append("*** UUID's ***")
         allInfoArray.append("Unique ID: \(ss.uniqueID)")
         allInfoArray.append("Device Signature: \(ss.deviceSignature)")
         allInfoArray.append("cfuuid: \(ss.cfuuid)")
         
         
-        allInfoArray.append(". ")
+        allInfoArray.append(" ")
         allInfoArray.append("*** APPLICATION ***")
         allInfoArray.append("ApplicationVVersion: \(ss.applicationVersion)")
         allInfoArray.append("ClipboardVContent: \(ss.clipboardContent)")
         
         if let procInfo = ss.processesInformation
         {
-            allInfoArray.append(". ")
+            allInfoArray.append(" ")
             allInfoArray.append("*** PROCESSES ***")
             
             for row in procInfo

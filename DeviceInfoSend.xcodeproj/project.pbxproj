@@ -30,6 +30,7 @@
 		FE8CB8E01BEC1F4B0052928E /* SSProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8CB8CF1BEC1F4B0052928E /* SSProcessInfo.m */; };
 		FE8CB8E11BEC1F4B0052928E /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8CB8D11BEC1F4B0052928E /* SSProcessorInfo.m */; };
 		FE8CB8E21BEC1F4B0052928E /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8CB8D31BEC1F4B0052928E /* SSUUID.m */; };
+		FEB5AA3E1C5851130001C3BD /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5AA3D1C5851130001C3BD /* TermsViewController.swift */; };
 		FEF3D5651C0211BF00DC68C8 /* question1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FEF3D5641C0211BF00DC68C8 /* question1.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		FE8CB8D21BEC1F4B0052928E /* SSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUUID.h; sourceTree = "<group>"; };
 		FE8CB8D31BEC1F4B0052928E /* SSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUUID.m; sourceTree = "<group>"; };
 		FE8CB8D41BEC1F4B0052928E /* SystemServicesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesConstants.h; sourceTree = "<group>"; };
+		FEB5AA3D1C5851130001C3BD /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsViewController.swift; path = ../TermsViewController.swift; sourceTree = "<group>"; };
 		FEF3D5641C0211BF00DC68C8 /* question1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = question1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 				FE8CB8B51BEBFD6A0052928E /* SystemServices.m */,
 				FE4BF76A1BE68B9100986A45 /* AppDelegate.swift */,
 				FE4BF76C1BE68B9100986A45 /* ListViewController.swift */,
+				FEB5AA3D1C5851130001C3BD /* TermsViewController.swift */,
 				FE4BF76E1BE68B9100986A45 /* Main.storyboard */,
 				FE4BF7711BE68B9100986A45 /* Assets.xcassets */,
 				FE4BF7731BE68B9100986A45 /* LaunchScreen.storyboard */,
@@ -363,6 +366,7 @@
 				FE59379C1BFE72E400D4B551 /* ChecklistItem.swift in Sources */,
 				FE8CB8DE1BEC1F4B0052928E /* SSMemoryInfo.m in Sources */,
 				FE8CB8D61BEC1F4B0052928E /* SSAccelerometerInfo.m in Sources */,
+				FEB5AA3E1C5851130001C3BD /* TermsViewController.swift in Sources */,
 				FE4BF76D1BE68B9100986A45 /* ListViewController.swift in Sources */,
 				FE4BF76B1BE68B9100986A45 /* AppDelegate.swift in Sources */,
 				FE8CB8D51BEC1F4B0052928E /* NSObject+PerformBlockAfterDelay.m in Sources */,

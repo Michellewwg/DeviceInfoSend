@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LeT-d9-BjJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LeT-d9-BjJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Terms and Conditions-->
+        <scene sceneID="9LB-cr-cRm">
+            <objects>
+                <viewController storyboardIdentifier="TermsViewController" title="Terms and Conditions" id="Aqd-Gp-8cu" customClass="TermsViewController" customModule="DeviceInfoSend" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fp0-Kf-Fbl"/>
+                        <viewControllerLayoutGuide type="bottom" id="nam-o0-QnJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xto-ra-CM6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-38-nhl">
+                                <rect key="frame" x="20" y="550" width="61" height="30"/>
+                                <color key="backgroundColor" red="0.69411764705882351" green="0.85490196078431369" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="qYs-f8-5bw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="I Agree">
+                                    <color key="titleColor" red="0.082352941176470587" green="0.19215686274509805" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="termsAccepted:" destination="Aqd-Gp-8cu" eventType="touchUpInside" id="QPN-sw-hEs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaH-k7-17V">
+                                <rect key="frame" x="437" y="550" width="143" height="30"/>
+                                <color key="backgroundColor" red="0.69411764705882351" green="0.85490196078431369" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="eOo-xv-7Kl"/>
+                                </constraints>
+                                <state key="normal" title="I Do not agree">
+                                    <color key="titleColor" red="0.08235294118" green="0.19215686269999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="termsNotAccepted:" destination="Aqd-Gp-8cu" eventType="touchUpInside" id="enJ-XZ-0sz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" Send Your Device information" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OVO-gc-JYJ">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.69411764710000001" green="0.85490196080000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.1095914692" green="0.29366812069999998" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9w-hT-u94">
+                                <rect key="frame" x="20" y="75" width="560" height="435"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">The Device Info Send application (app) was designed to be used when you need to provide information to a help desk or support personnel.  The app will allow you view the information so you can make a decision if you want to send it.   After selecting a destination you will be able to edit the items to add or remove details before actually sending the data.
+
+The app does not include social networking features. By clicking ‘I Agree’ you understand that this app will only send information to the destinations you provide and the data you allow.</mutableString>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yaH-k7-17V" firstAttribute="trailing" secondItem="xto-ra-CM6" secondAttribute="trailingMargin" id="5BO-eh-OZx"/>
+                            <constraint firstItem="BBa-38-nhl" firstAttribute="leading" secondItem="xto-ra-CM6" secondAttribute="leadingMargin" id="6rH-Vw-v30"/>
+                            <constraint firstItem="OVO-gc-JYJ" firstAttribute="leading" secondItem="n9w-hT-u94" secondAttribute="leading" id="9yd-mb-k23"/>
+                            <constraint firstItem="n9w-hT-u94" firstAttribute="trailing" secondItem="yaH-k7-17V" secondAttribute="trailing" id="CdN-AU-Yx2"/>
+                            <constraint firstItem="BBa-38-nhl" firstAttribute="leading" secondItem="n9w-hT-u94" secondAttribute="leading" id="DMi-zl-XiK"/>
+                            <constraint firstItem="OVO-gc-JYJ" firstAttribute="top" secondItem="Fp0-Kf-Fbl" secondAttribute="bottom" id="L8w-8W-sTU"/>
+                            <constraint firstAttribute="bottom" secondItem="BBa-38-nhl" secondAttribute="bottom" constant="20" symbolic="YES" id="LbD-xy-2gs"/>
+                            <constraint firstItem="yaH-k7-17V" firstAttribute="top" secondItem="BBa-38-nhl" secondAttribute="top" id="NP7-9c-PDb"/>
+                            <constraint firstItem="OVO-gc-JYJ" firstAttribute="trailing" secondItem="n9w-hT-u94" secondAttribute="trailing" id="XqL-Ji-1qz"/>
+                            <constraint firstItem="n9w-hT-u94" firstAttribute="top" secondItem="OVO-gc-JYJ" secondAttribute="bottom" constant="25" id="ZDq-Af-Ipd"/>
+                            <constraint firstItem="BBa-38-nhl" firstAttribute="top" secondItem="n9w-hT-u94" secondAttribute="bottom" constant="40" id="v7C-Kf-jET"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="mVA-dp-khp" kind="show" identifier="ListViewController" id="QaB-YJ-Ybg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imW-s5-YsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1675" y="-515"/>
+        </scene>
         <!--List View Controller-->
         <scene sceneID="xAN-Qo-65I">
             <objects>
@@ -11,11 +92,10 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tJR-gc-SZT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChecklistItem" id="h42-kz-Cla">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h42-kz-Cla" id="yJh-Li-GSJ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -23,15 +103,12 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-eE-EIx">
                                             <rect key="frame" x="8" y="11" width="534" height="21"/>
-                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,10 +123,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Aqd-Gp-8cu" kind="show" identifier="TermsViewController" id="und-8Q-jbx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzn-d5-uyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="222"/>
+            <point key="canvasLocation" x="1248" y="239"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sKe-6l-JAi">
@@ -59,7 +139,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fZD-Th-S3J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -71,4 +150,7 @@
             <point key="canvasLocation" x="423" y="222"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QaB-YJ-Ybg"/>
+    </inferredMetricsTieBreakers>
 </document>
